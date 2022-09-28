@@ -57,7 +57,7 @@ for i in range(0, numOfEnemies):
     enemyImg += [pygame.image.load('ninja.png')]
     enemyX += [random.randint(1,735) ]     #random start location, goes from 1 - 735 so it doesnt spawn on edges
     enemyY += [random.randint(0, 175)]
-    enemy_changeX += [1]        #rate of change of X
+    enemy_changeX += [5]        #rate of change of X
 
 #kunai image load
 kunaiImg = pygame.image.load('kunai.png')
@@ -108,7 +108,7 @@ def showScore(x, y):
 def gameOver():
     over_text = gameOver_font.render('GAME OVER', True, (255, 255, 255))
     next_step_1 = font.render('Press <SPACE> to play again', True, (255, 255, 255)) #line 1 of next step
-    next_step_2 = font.render('Press <q> to play again', True, (255, 255, 255))     #line 2 of next steps
+    next_step_2 = font.render('Press <q> to quit', True, (255, 255, 255))     #line 2 of next steps
     screen.blit(over_text, (200, 250))
     screen.blit(next_step_1, (175, 350))
     screen.blit(next_step_2, (220, 400))
